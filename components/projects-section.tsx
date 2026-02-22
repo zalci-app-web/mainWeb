@@ -29,10 +29,9 @@ export function ProjectsSection() {
       </h2>
       <div className="mt-6 divide-y divide-border rounded-lg border border-border bg-card">
         {projects.map((project) => (
-          <a
+          <div
             key={project.title}
-            href={project.href}
-            className="group flex items-center justify-between px-6 py-5 transition-colors hover:bg-secondary/50"
+            className="flex items-center justify-between px-6 py-5 opacity-70"
           >
             <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">
               <h3 className="text-base font-medium text-foreground">
@@ -46,9 +45,8 @@ export function ProjectsSection() {
               <span className="hidden rounded-full bg-accent px-2.5 py-0.5 text-xs font-medium text-accent-foreground sm:inline-block">
                 {project.tech}
               </span>
-              <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </section>
